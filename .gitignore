@@ -1,0 +1,46 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/sample-app-angular/dist
+/sample-app-angular/tmp
+/sample-app-angular/out-tsc
+/sample-app-angular/bazel-out
+
+# Node
+/sample-app-angular/node_modules
+/sample-app-server/node_modules
+/sample-app-server/ssl
+/sample-app-server/userimages
+/sample-app-server/www
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+/sample-app-angular/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/sample-app-angular/.angular/cache
+/sample-app-angular/.sass-cache/
+/sample-app-angular/connect.lock
+/sample-app-angular/coverage
+/sample-app-angular/libpeerconnection.log
+/sample-app-angular/testem.log
+/sample-app-angular/typings
+
+# System files
+/sample-app-angular/.DS_Store
+/sample-app-angular/Thumbs.db

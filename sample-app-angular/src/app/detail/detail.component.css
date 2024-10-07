@@ -1,0 +1,13 @@
+section{
+    margin:1em;
+    padding:0.5em;
+    background-color:#ffffff;
+}
+.header{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    gap:1em;
+}
+section svg{
+    justify-self: end;
+}

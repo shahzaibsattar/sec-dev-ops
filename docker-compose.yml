@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Backend service (Node.js + MongoDB)
+  backend:
+    image: my-backend-mongo-image  # Use the pre-built backend image
+    container_name: sample-app-server
+    ports:
+      - "3000:3000"  # Expose port 3000 for the Node.js backend
+      - "27017:27017"  # Expose MongoDB port (for internal use, ensure backend connects here)
+    environment:
+      - MONGO_URL=mongodb://localhost:27017/
+    command: bash -c "mongod --bind_ip 0.0.0.0 --logpath /var/log/mongod.log --fork && npm start"
+
+  # Frontend service (Angular app)
+  frontend:
+    image: sample-app-angular  # Use the pre-built frontend image
+    container_name: sample-app-angular
+    ports:
+      - "4200:4200"  # Expose port 4200 for Angular app
+    depends_on:
+      - backend  # Ensure frontend starts after backend
+

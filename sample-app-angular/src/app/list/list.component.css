@@ -1,0 +1,15 @@
+li:hover{
+    cursor:pointer;
+}
+li { background: rgb(227, 228, 227); padding:0.25em;}
+li:nth-child(odd) { background: rgb(129, 129, 129);
+color:#ffffff; }
+ul{
+    list-style:none;
+}
+
+section{
+    margin:1em;
+    padding:0.5em;
+    background-color:#ffffff;
+}

@@ -1,0 +1,35 @@
+<div class="container">
+    <form >
+        <div class="form-group">
+            <label for="rooms">Select a room </label>
+            <select [(ngModel)] = "selectedRoom" name="roomslist" class="form-control" [disabled] = "isinRoom">
+                <option [ngValue]="null">Select Room</option>
+                <option *ngFor="let room of rooms">
+                    {{room}}
+                </option>
+                </select>
+        </div>
+        <div class="form-group">
+            
+            
+            <button *ngIf="!isinRoom" (click)="joinroom()" class="btn btn-primary">Join</button> 
+
+            <button *ngIf="isinRoom" (click)="leaveroom()" class="btn btn-primary">Leave</button> 
+           
+        </div>
+        <div class="form-group">
+            <label for="messageout">New Message</label>
+            <input type="text" [(ngModel)]="messageout"  name="messageout" id="messageout" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <button *ngIf="isinRoom" (click)="chat()" class="btn btn-primary">Chat</button> 
+           
+        </div>
+        
+    </form>
+    <strong>Connected as: {{currentuser.username}}</strong>
+    <h3>Chat Messages</h3>
+    <ul>
+        <li *ngFor="let message of messagesin">{{message.dt | date:'dd/MM/yyy'}} - {{message.msg}},</li>
+    </ul>
+</div>

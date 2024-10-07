@@ -1,0 +1,23 @@
+
+<div class="header">
+    <h1>Home Component</h1>
+     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg> -->
+</div>   
+
+
+<section>
+    <app-list></app-list>
+    <app-detail></app-detail>
+</section>
+<div class="info">
+    <h3>Explanation of workings</h3>
+    <p>Test data is stored in the "data service". </p>
+    <p>The home component is host to two sub components (List and Detail). 
+    <p>The list component subscribes to the data via the data service and fills out the list of cars. </p>
+    <p>Selecting a car sets the currentcar in the data services</p>
+    <p>The details component subscibes to the current car from the data service and is updated with the currently selected cars data each time the user selects a new car in the list.</p>
+    <p>When a data field for a car is modified the save button will become active to allow saving of that data.</p>    
+</div>
